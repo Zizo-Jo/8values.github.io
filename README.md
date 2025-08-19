@@ -20,7 +20,7 @@ To deploy the 8values website to your AWS account, follow these steps:
 3. **Initialize Terraform.** Run `terraform init` to initialize the Terraform working directory.
 4. **(Optional) Change the bucket name.** If you want to use a different name for the S3 bucket, modify the `bucket` argument in the `aws_s3_bucket` resource in `main.tf`.
 5. **Deploy the infrastructure.** Run `terraform apply` to create the AWS resources.
-6. **Upload the website files.** After the infrastructure is created, you need to upload the 8values website files to the S3 bucket. You can do this using the AWS Management Console or the AWS CLI.
+6. **Upload the website files.** After the infrastructure is created, you need to upload the 8values website files to the S3 bucket. You can do this using the AWS Management Console or the AWS CLI. (Or sync by the terminal: aws s3 sync /your/local/path://your-s3-unique-name --delete)
 7. **Access the website.** Once the files are uploaded, you can access the website through the CloudFront distribution's domain name. You can find this domain name in the `outputs.tf` file or in the AWS Management Console.
 
 ## Cleanup
