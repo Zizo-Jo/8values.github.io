@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "aws" {
-  region = "eu-south-2"
+  region = "us-east-1" # Globally, feel free to change region which is close to your country.
 }
 
 resource "aws_s3_bucket" "website_bucket" {
